@@ -1,0 +1,148 @@
+* {
+  font-size: 12px;
+}
+
+.panel {
+  background-color: #DEDEDE;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  border-right: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
+}
+
+form h1 {
+  padding-left: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+input[type="text"], input[type="password"] {
+  color: #444;
+  background: white;
+  border: 2px solid white;
+  padding: 5px 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  margin: 5px 10px;
+}
+
+#error_explanation {
+  background-color: #FFBABA;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 15px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.notice {
+  background-color: #FEEFB3;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 15px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#top-toolbar {
+  float: right;
+  top: 0px;
+}
+
+#logo {
+  clear: both;
+  margin: 0 auto;
+  width: 400px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#signin-up-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#signup, #signin {
+  width: 260px;
+  margin: 50px auto;
+  padding: 15px;
+}
+
+#signup button, #signin button {
+  margin-top: 30px;
+  margin-left: 200px;
+}
+
+#signup a, #signin a {
+  display: block;
+  margin: 5px 0px 0px 15px;
+}
+
+#copyright {
+  clear: both;
+  margin: 0 auto;
+  padding-top: 60px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-dialog {
+  background: none repeat scroll 0 0 #EEEEEE;
+  border: 1px solid #FFFFFF;
+  display: none;
+  max-width: 75%;
+  min-height: 50px;
+  min-width: 200px;
+  position: fixed;
+  z-index: 99999999;
+  background: #EEE;
+  border: 1px solid white;
+  box-shadow: 0px 3px 7px #333;
+  -moz-box-shadow: 0px 3px 7px #333;
+  -webkit-box-shadow: 0px 3px 7px #333;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -khtml-border-radius: 4px;
+}
+
+.modal-dialog div.inner {
+  text-shadow: 0px 1px 0px white;
+  color: #333333;
+  padding: 20px;
+  text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.modal-dialog div.buttons, input {
+  margin: 20px 10px 0;
+  text-align: center;
+}
+
+.modal-dialog button {
+  -moz-border-radius: 3px 3px 3px 3px;
+  -moz-box-shadow: 0 1px 2px #CCCCCC;
+  background: none repeat scroll 0 50% transparent;
+  border: 1px solid #BBBBBB;
+  color: #232D3D;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 3px;
+  padding: 4px 10px;
+  text-shadow: 0 1px 0 #FFFFFF;
+}
+
+#simplemodal-overlay {background-color:#000;}
+
+.clear {
+  clear: both;
+}

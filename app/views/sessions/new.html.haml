@@ -1,0 +1,11 @@
+#signin{ :class => 'panel' }
+  = simple_form_for @user, :url => user_session_path do |f|
+    - if flash[:notice]
+      .notice= flash[:notice]
+    - if flash[:alert]
+      #error_explanation= flash[:alert]
+    %h1= t('titles.signin')
+    = f.text_field :login, :placeholder => t('labels.email_or_name'), :label => t('labels.email_or_name')
+    = f.password_field :password, :placeholder => t('labels.password'), :label => t('labels.password')
+    %button{ :class => 'sexybutton sexysimple sexyblue', :type => 'submit'}= t('buttons.signin')
+

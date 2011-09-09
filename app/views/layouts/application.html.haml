@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=UTF-8'}/ 
+    %title= t("app.name")
+    %link{ :rel => 'stylesheet', :href => '/components/SexyButtons/sexybuttons.css', :type => 'text/css' } 
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+    = yield :header
+    %body
+      - if user_signed_in?
+        #top-toolbar
+          = link_to t('links.change_password'), edit_user_registration_path
+          = link_to t('links.signout'), destroy_user_session_path
+      #logo= t('app.name')
+        
+      = yield
+         
+      #copyright=raw t('app.copyright')
+

@@ -1,0 +1,13 @@
+'zh-CN':
+  app:
+    name: 'Exam'
+    copyright: '&copy;2011 Exam.INFO 版权所有'
+  buttons:
+    back: '返回'
+    cancel: '取消'
+    confirm: '确认'
+    signin: '登录'
+    signup: '注册'
+  errors:
+    messages:
+      internal_error: '服务器发生内部错误，请重试或联系管理员。'
