@@ -25,12 +25,12 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-ability_rb.html">app/models/ability.rb</a></td>
-            <td class='right_align'><tt>47</tt></td>
+            <td class='right_align'><tt>36</tt></td>
             <td class='right_align'><tt>9</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>87.23%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>83.33%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:87px"></div>
-        <div class="uncovered" style="width:13px"></div>
+        <div class="covered" style="width:83px"></div>
+        <div class="uncovered" style="width:17px"></div>
       </div></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>33.33%</tt></div>
       <div class="percent_graph">
@@ -75,126 +75,93 @@
           <td><pre><a name="line9">9</a>       can :access, :rails_admin</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line10">10</a>       can(:manage, User) if user.role? :teacher</pre></td>
+          <td><pre><a name="line10">10</a>       can(:manage, :all) if user.role? :admin</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line11">11</a>       can(:manage, :all) if user.role? :admin</pre></td>
+          <td><pre><a name="line11">11</a>       can(:manage, [Question, QuestionType]) if user.role? :teacher</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line12">12</a>     end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line13">13</a> =begin</pre></td>
+          <td><pre><a name="line13">13</a>     </pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line14">14</a>     case</pre></td>
+          <td><pre><a name="line14">14</a>     # Define abilities for the passed in user here. For example:</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line15">15</a>     when user.is?(:students)</pre></td>
+          <td><pre><a name="line15">15</a>     #</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line16">16</a>       can :manage, []</pre></td>
+          <td><pre><a name="line16">16</a>     #   user ||= User.new # guest user (not logged in)</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line17">17</a>     when user.is?(:teachers)</pre></td>
+          <td><pre><a name="line17">17</a>     #   if user.admin?</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line18">18</a>       can :manage, []</pre></td>
+          <td><pre><a name="line18">18</a>     #     can :manage, :all</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line19">19</a>     when user.is?(:admins)</pre></td>
+          <td><pre><a name="line19">19</a>     #   else</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line20">20</a>       can :manage, :all</pre></td>
+          <td><pre><a name="line20">20</a>     #     can :read, :all</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line21">21</a>     else</pre></td>
+          <td><pre><a name="line21">21</a>     #   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line22">22</a>       can :read, :all</pre></td>
+          <td><pre><a name="line22">22</a>     #</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line23">23</a>     end</pre></td>
+          <td><pre><a name="line23">23</a>     # The first argument to `can` is the action you are giving the user permission to do.</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line24">24</a> =end</pre></td>
+          <td><pre><a name="line24">24</a>     # If you pass :manage it will apply to every action. Other common actions here are</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line25">25</a>     # Define abilities for the passed in user here. For example:</pre></td>
+          <td><pre><a name="line25">25</a>     # :read, :create, :update and :destroy.</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line26">26</a>     #</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line27">27</a>     #   user ||= User.new # guest user (not logged in)</pre></td>
+          <td><pre><a name="line27">27</a>     # The second argument is the resource the user can perform the action on. If you pass</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line28">28</a>     #   if user.admin?</pre></td>
+          <td><pre><a name="line28">28</a>     # :all it will apply to every resource. Otherwise pass a Ruby class of the resource.</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line29">29</a>     #     can :manage, :all</pre></td>
+          <td><pre><a name="line29">29</a>     #</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line30">30</a>     #   else</pre></td>
+          <td><pre><a name="line30">30</a>     # The third argument is an optional hash of conditions to further filter the objects.</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line31">31</a>     #     can :read, :all</pre></td>
+          <td><pre><a name="line31">31</a>     # For example, here the user can only update published articles.</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line32">32</a>     #   end</pre></td>
+          <td><pre><a name="line32">32</a>     #</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line33">33</a>     #</pre></td>
+          <td><pre><a name="line33">33</a>     #   can :update, Article, :published =&gt; true</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line34">34</a>     # The first argument to `can` is the action you are giving the user permission to do.</pre></td>
+          <td><pre><a name="line34">34</a>     #</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line35">35</a>     # If you pass :manage it will apply to every action. Other common actions here are</pre></td>
+          <td><pre><a name="line35">35</a>     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line36">36</a>     # :read, :create, :update and :destroy.</pre></td>
+          <td><pre><a name="line36">36</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line37">37</a>     #</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line38">38</a>     # The second argument is the resource the user can perform the action on. If you pass</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line39">39</a>     # :all it will apply to every resource. Otherwise pass a Ruby class of the resource.</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line40">40</a>     #</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line41">41</a>     # The third argument is an optional hash of conditions to further filter the objects.</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line42">42</a>     # For example, here the user can only update published articles.</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line43">43</a>     #</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line44">44</a>     #   can :update, Article, :published =&gt; true</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line45">45</a>     #</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line46">46</a>     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line47">47</a>   end</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line48">48</a> end</pre></td>
+          <td><pre><a name="line37">37</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2011/09/09 01:34 AM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/09 08:38 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>

@@ -6,21 +6,10 @@ class Ability
     can :read, :all
     if not user.role? :student
       can :access, :rails_admin
-      can(:manage, User) if user.role? :teacher
       can(:manage, :all) if user.role? :admin
+      can(:manage, [Question, QuestionType]) if user.role? :teacher
     end
-=begin
-    case
-    when user.is?(:students)
-      can :manage, []
-    when user.is?(:teachers)
-      can :manage, []
-    when user.is?(:admins)
-      can :manage, :all
-    else
-      can :read, :all
-    end
-=end
+    
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908025624) do
+ActiveRecord::Schema.define(:version => 20110909033707) do
+
+  create_table "question_types", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "title",            :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "question_type_id", :null => false
+  end
 
   create_table "rails_admin_histories", :force => true do |t|
     t.string   "message"

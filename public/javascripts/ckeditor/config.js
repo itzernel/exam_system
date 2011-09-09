@@ -1,31 +1,52 @@
-/*
-Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
+﻿/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
-
-Custom configuration for Rails Admin, by Fabio Akita
 */
 
 CKEDITOR.editorConfig = function( config )
 {
-    // Define changes to default configuration here. For example:
-    // config.language = 'fr';
-    // config.uiColor = '#AADC6E';
-    config.toolbar =
+	// Define changes to default configuration here. For example:
+	// config.language = 'fr';
+	// config.uiColor = '#AADC6E';
+	
+  /* Filebrowser routes */
+  // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
+  config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
+
+  // The location of an external file browser, that should be launched when "Browse Server" button is pressed in the Flash dialog.
+  config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files";
+
+  // The location of a script that handles file uploads in the Flash dialog.
+  config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files";
+  
+  // The location of an external file browser, that should be launched when "Browse Server" button is pressed in the Link tab of Image dialog.
+  config.filebrowserImageBrowseLinkUrl = "/ckeditor/pictures";
+
+  // The location of an external file browser, that should be launched when "Browse Server" button is pressed in the Image dialog.
+  config.filebrowserImageBrowseUrl = "/ckeditor/pictures";
+
+  // The location of a script that handles file uploads in the Image dialog.
+  config.filebrowserImageUploadUrl = "/ckeditor/pictures";
+  
+  // The location of a script that handles file uploads.
+  config.filebrowserUploadUrl = "/ckeditor/attachment_files";
+  
+  /* Extra plugins */
+  // works only with en, ru, uk locales
+  config.extraPlugins = "embed,attachment";
+  
+  /* Toolbars */
+  config.toolbar = 'Easy';
+  
+  config.toolbar_Easy =
     [
-        ['Source','-'],
-        ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
-        ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-        ['BidiLtr', 'BidiRtl'],
-        '/',
-        ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
-        ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
+        ['Source','-','Preview'],
+        ['Cut','Copy','Paste','PasteText','PasteFromWord',],
+        ['Undo','Redo','-','SelectAll','RemoveFormat'],
+        ['Styles','Format'], ['Subscript', 'Superscript', 'TextColor'], ['Maximize','-','About'], '/',
+        ['Bold','Italic','Underline','Strike'], ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
-        ['Link','Unlink','Anchor'],
-        ['Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],
-        '/',
-        ['Styles','Format','Font','FontSize'],
-        ['TextColor','BGColor'],
-        ['Maximize', 'ShowBlocks','-','About']
+        ['Link','Unlink','Anchor'], ['Image', 'Attachment', 'Flash', 'Embed'],
+        ['Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
     ];
 };
-

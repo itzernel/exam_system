@@ -23,6 +23,7 @@ gem 'nokogiri'
  gem 'devise'
  gem "cancan"
  gem 'rails_admin',  :git => 'git://github.com/sferik/rails_admin.git', :branch => "rails-3.0"
+ gem 'ckeditor', '~>3.6.0'
 # gem "simple_form"
 # gem 'fastercsv' # for Ruby 1.8.7+
 # gem 'prawn'

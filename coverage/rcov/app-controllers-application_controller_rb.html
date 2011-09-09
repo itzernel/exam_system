@@ -69,7 +69,7 @@
           <td><pre><a name="line7">7</a>     return super unless resource.is_a?(User)</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line8">8</a>     return rails_admin_dashboard_path if resource.is?(:admins) || resource.is?(:teachers)</pre></td>
+          <td><pre><a name="line8">8</a>     return rails_admin_dashboard_path if resource.role?(:admin) || resource.role?(:teacher)</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line9">9</a>     #return other_url if resource.is?(:students)</pre></td>
@@ -107,7 +107,7 @@
       </tbody>
     </table>
 
-    <p>Generated on 2011/09/09 01:34 AM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/09 08:38 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>

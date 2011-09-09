@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     return super unless resource.is_a?(User)
-    return rails_admin_dashboard_path if resource.is?(:admins) || resource.is?(:teachers)
+    return rails_admin_dashboard_path if resource.role?(:admin) || resource.role?(:teacher)
     #return other_url if resource.is?(:students)
   end
 

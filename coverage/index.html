@@ -21,20 +21,20 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-09T01:34:28+08:00">2011-09-09T01:34:28+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-09T20:38:20+08:00">2011-09-09T20:38:20+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">63.33%</span>)
+    (<span class="red">69.44%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>4</b> files in total.
-    <b>30</b> relevant lines. 
-    <span class="green"><b>19</b> lines covered</span> and
+    <b>6</b> files in total.
+    <b>36</b> relevant lines. 
+    <span class="green"><b>25</b> lines covered</span> and
     <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -71,10 +71,28 @@
       <tr>
         <td><a href="#dac4fb02ea59afb9f3fde04459fe242f08a7e167" class="src_link" title="./app/models/ability.rb">./app/models/ability.rb</a></td>
         <td class="red">33.33 %</td>
-        <td>47</td>
+        <td>36</td>
         <td>9</td>
         <td>3</td>
         <td>6</td>
+      </tr>
+      
+      <tr>
+        <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td><a href="#5753b941ac839de9ab5e76629218f1087db2058b" class="src_link" title="./app/models/question_type.rb">./app/models/question_type.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
       </tr>
       
       <tr>
@@ -132,13 +150,13 @@
           <div class="file_list_container" id="Models">
   <h2>
     Models
-    (<span class="red">63.16%</span>)
+    (<span class="red">72.0%</span>)
   </h2>
   <a name="Models"></a>
   <div>
-    <b>2</b> files in total.
-    <b>19</b> relevant lines. 
-    <span class="green"><b>12</b> lines covered</span> and
+    <b>4</b> files in total.
+    <b>25</b> relevant lines. 
+    <span class="green"><b>18</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -157,10 +175,28 @@
       <tr>
         <td><a href="#dac4fb02ea59afb9f3fde04459fe242f08a7e167" class="src_link" title="./app/models/ability.rb">./app/models/ability.rb</a></td>
         <td class="red">33.33 %</td>
-        <td>47</td>
+        <td>36</td>
         <td>9</td>
         <td>3</td>
         <td>6</td>
+      </tr>
+      
+      <tr>
+        <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td><a href="#5753b941ac839de9ab5e76629218f1087db2058b" class="src_link" title="./app/models/question_type.rb">./app/models/question_type.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
       </tr>
       
       <tr>
@@ -383,7 +419,7 @@
         <pre>7</pre>
       </td>
       <td>
-        <pre>    return rails_admin_dashboard_path if resource.is?(:admins) || resource.is?(:teachers)</pre>
+        <pre>    return rails_admin_dashboard_path if resource.role?(:admin) || resource.role?(:teacher)</pre>
       </td>
       <td class="hits">
         0
@@ -711,7 +747,7 @@
         <pre>9</pre>
       </td>
       <td>
-        <pre>      can(:manage, User) if user.role? :teacher</pre>
+        <pre>      can(:manage, :all) if user.role? :admin</pre>
       </td>
       <td class="hits">
         0
@@ -724,7 +760,7 @@
         <pre>10</pre>
       </td>
       <td>
-        <pre>      can(:manage, :all) if user.role? :admin</pre>
+        <pre>      can(:manage, [Question, QuestionType]) if user.role? :teacher</pre>
       </td>
       <td class="hits">
         0
@@ -750,7 +786,7 @@
         <pre>12</pre>
       </td>
       <td>
-        <pre>=begin</pre>
+        <pre>    </pre>
       </td>
       <td class="hits">
         
@@ -763,7 +799,7 @@
         <pre>13</pre>
       </td>
       <td>
-        <pre>    case</pre>
+        <pre>    # Define abilities for the passed in user here. For example:</pre>
       </td>
       <td class="hits">
         
@@ -776,7 +812,7 @@
         <pre>14</pre>
       </td>
       <td>
-        <pre>    when user.is?(:students)</pre>
+        <pre>    #</pre>
       </td>
       <td class="hits">
         
@@ -789,7 +825,7 @@
         <pre>15</pre>
       </td>
       <td>
-        <pre>      can :manage, []</pre>
+        <pre>    #   user ||= User.new # guest user (not logged in)</pre>
       </td>
       <td class="hits">
         
@@ -802,7 +838,7 @@
         <pre>16</pre>
       </td>
       <td>
-        <pre>    when user.is?(:teachers)</pre>
+        <pre>    #   if user.admin?</pre>
       </td>
       <td class="hits">
         
@@ -815,7 +851,7 @@
         <pre>17</pre>
       </td>
       <td>
-        <pre>      can :manage, []</pre>
+        <pre>    #     can :manage, :all</pre>
       </td>
       <td class="hits">
         
@@ -828,7 +864,7 @@
         <pre>18</pre>
       </td>
       <td>
-        <pre>    when user.is?(:admins)</pre>
+        <pre>    #   else</pre>
       </td>
       <td class="hits">
         
@@ -841,7 +877,7 @@
         <pre>19</pre>
       </td>
       <td>
-        <pre>      can :manage, :all</pre>
+        <pre>    #     can :read, :all</pre>
       </td>
       <td class="hits">
         
@@ -854,7 +890,7 @@
         <pre>20</pre>
       </td>
       <td>
-        <pre>    else</pre>
+        <pre>    #   end</pre>
       </td>
       <td class="hits">
         
@@ -867,7 +903,7 @@
         <pre>21</pre>
       </td>
       <td>
-        <pre>      can :read, :all</pre>
+        <pre>    #</pre>
       </td>
       <td class="hits">
         
@@ -880,7 +916,7 @@
         <pre>22</pre>
       </td>
       <td>
-        <pre>    end</pre>
+        <pre>    # The first argument to `can` is the action you are giving the user permission to do.</pre>
       </td>
       <td class="hits">
         
@@ -893,7 +929,7 @@
         <pre>23</pre>
       </td>
       <td>
-        <pre>=end</pre>
+        <pre>    # If you pass :manage it will apply to every action. Other common actions here are</pre>
       </td>
       <td class="hits">
         
@@ -906,7 +942,7 @@
         <pre>24</pre>
       </td>
       <td>
-        <pre>    # Define abilities for the passed in user here. For example:</pre>
+        <pre>    # :read, :create, :update and :destroy.</pre>
       </td>
       <td class="hits">
         
@@ -932,7 +968,7 @@
         <pre>26</pre>
       </td>
       <td>
-        <pre>    #   user ||= User.new # guest user (not logged in)</pre>
+        <pre>    # The second argument is the resource the user can perform the action on. If you pass</pre>
       </td>
       <td class="hits">
         
@@ -945,7 +981,7 @@
         <pre>27</pre>
       </td>
       <td>
-        <pre>    #   if user.admin?</pre>
+        <pre>    # :all it will apply to every resource. Otherwise pass a Ruby class of the resource.</pre>
       </td>
       <td class="hits">
         
@@ -958,7 +994,7 @@
         <pre>28</pre>
       </td>
       <td>
-        <pre>    #     can :manage, :all</pre>
+        <pre>    #</pre>
       </td>
       <td class="hits">
         
@@ -971,7 +1007,7 @@
         <pre>29</pre>
       </td>
       <td>
-        <pre>    #   else</pre>
+        <pre>    # The third argument is an optional hash of conditions to further filter the objects.</pre>
       </td>
       <td class="hits">
         
@@ -984,7 +1020,7 @@
         <pre>30</pre>
       </td>
       <td>
-        <pre>    #     can :read, :all</pre>
+        <pre>    # For example, here the user can only update published articles.</pre>
       </td>
       <td class="hits">
         
@@ -997,7 +1033,7 @@
         <pre>31</pre>
       </td>
       <td>
-        <pre>    #   end</pre>
+        <pre>    #</pre>
       </td>
       <td class="hits">
         
@@ -1010,7 +1046,7 @@
         <pre>32</pre>
       </td>
       <td>
-        <pre>    #</pre>
+        <pre>    #   can :update, Article, :published =&gt; true</pre>
       </td>
       <td class="hits">
         
@@ -1023,7 +1059,7 @@
         <pre>33</pre>
       </td>
       <td>
-        <pre>    # The first argument to `can` is the action you are giving the user permission to do.</pre>
+        <pre>    #</pre>
       </td>
       <td class="hits">
         
@@ -1036,7 +1072,7 @@
         <pre>34</pre>
       </td>
       <td>
-        <pre>    # If you pass :manage it will apply to every action. Other common actions here are</pre>
+        <pre>    # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities</pre>
       </td>
       <td class="hits">
         
@@ -1049,7 +1085,7 @@
         <pre>35</pre>
       </td>
       <td>
-        <pre>    # :read, :create, :update and :destroy.</pre>
+        <pre>  end</pre>
       </td>
       <td class="hits">
         
@@ -1062,46 +1098,67 @@
         <pre>36</pre>
       </td>
       <td>
-        <pre>    #</pre>
+        <pre>end</pre>
       </td>
       <td class="hits">
         
       </td>
     </tr>
   
+    </tbody>
+  </table>
+</div>
+      
+        <div class="source_table" id="5b677d9c71d552f8b1b34b006fa3d5e431406ea9">
+  <table>
+    <thead>
+    <tr>
+      <td colspan="3">
+        <h3>./app/models/question.rb</h3>
+        <h4><span class="green">100.0 %</span> covered</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th>Hits</th>
+    </tr>
+    </thead>
+    <tbody>
+  
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>37</pre>
+        <pre>1</pre>
       </td>
       <td>
-        <pre>    # The second argument is the resource the user can perform the action on. If you pass</pre>
+        <pre>class Question &lt; ActiveRecord::Base</pre>
       </td>
       <td class="hits">
-        
+        1
       </td>
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>38</pre>
+        <pre>2</pre>
       </td>
       <td>
-        <pre>    # :all it will apply to every resource. Otherwise pass a Ruby class of the resource.</pre>
+        <pre>  validates :title, :presence =&gt; true, :uniqueness =&gt; true</pre>
       </td>
       <td class="hits">
-        
+        1
       </td>
     </tr>
   
     
     <tr class="never" >
       <td class="line_number">
-        <pre>39</pre>
+        <pre>3</pre>
       </td>
       <td>
-        <pre>    #</pre>
+        <pre></pre>
       </td>
       <td class="hits">
         
@@ -1109,64 +1166,85 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>40</pre>
+        <pre>4</pre>
       </td>
       <td>
-        <pre>    # The third argument is an optional hash of conditions to further filter the objects.</pre>
+        <pre>  belongs_to :question_type</pre>
       </td>
       <td class="hits">
-        
+        1
       </td>
     </tr>
   
     
     <tr class="never" >
       <td class="line_number">
-        <pre>41</pre>
+        <pre>5</pre>
       </td>
       <td>
-        <pre>    # For example, here the user can only update published articles.</pre>
+        <pre>end</pre>
       </td>
       <td class="hits">
         
       </td>
     </tr>
   
+    </tbody>
+  </table>
+</div>
+      
+        <div class="source_table" id="5753b941ac839de9ab5e76629218f1087db2058b">
+  <table>
+    <thead>
+    <tr>
+      <td colspan="3">
+        <h3>./app/models/question_type.rb</h3>
+        <h4><span class="green">100.0 %</span> covered</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th>Hits</th>
+    </tr>
+    </thead>
+    <tbody>
+  
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>42</pre>
+        <pre>1</pre>
       </td>
       <td>
-        <pre>    #</pre>
+        <pre>class QuestionType &lt; ActiveRecord::Base</pre>
       </td>
       <td class="hits">
-        
+        1
       </td>
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>43</pre>
+        <pre>2</pre>
       </td>
       <td>
-        <pre>    #   can :update, Article, :published =&gt; true</pre>
+        <pre>  validates :name, :presence =&gt; true, :uniqueness =&gt; true</pre>
       </td>
       <td class="hits">
-        
+        1
       </td>
     </tr>
   
     
     <tr class="never" >
       <td class="line_number">
-        <pre>44</pre>
+        <pre>3</pre>
       </td>
       <td>
-        <pre>    #</pre>
+        <pre></pre>
       </td>
       <td class="hits">
         
@@ -1174,35 +1252,22 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>45</pre>
+        <pre>4</pre>
       </td>
       <td>
-        <pre>    # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities</pre>
+        <pre>  has_many :questions</pre>
       </td>
       <td class="hits">
-        
+        1
       </td>
     </tr>
   
     
     <tr class="never" >
       <td class="line_number">
-        <pre>46</pre>
-      </td>
-      <td>
-        <pre>  end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>47</pre>
+        <pre>5</pre>
       </td>
       <td>
         <pre>end</pre>

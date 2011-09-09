@@ -211,14 +211,16 @@ zh-CN:
         record_invalid: "校验失败: %{errors}"
     models:
       user: '用户'
+      question: '题目'
+      question_type: '题目类型'
     attributes:
         user:
           id: '编号'
           name: '姓名'
           email: '电子邮箱'
           role: '角色'
-          password: '密码'
-          password_confirmation: '确认密码'
+          password: "密码"
+          password_confirmation: "确认密码"
           reset_password_sent_at: '重置密码发送时间'
           remember_created_at: '记住我设置时间'
           sign_in_count: '登录次数'
@@ -226,6 +228,17 @@ zh-CN:
           last_sign_in_at: '上次登录时间'
           current_sign_in_ip: '本次登录ip'
           last_sign_in_ip: '上次登录ip'
+          created_at: '创建时间'
+          updated_at: '更新时间'
+        question:
+          id: '编号'
+          title: '题目'
+          question_type: '题目类型'
+          created_at: '创建时间'
+          updated_at: '更新时间'
+        question_type:
+          name: '类型'
+          questions: '题目'
           created_at: '创建时间'
           updated_at: '更新时间'
 
