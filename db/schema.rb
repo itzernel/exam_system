@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110910063421) do
+ActiveRecord::Schema.define(:version => 20110910075432) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
     t.integer  "question_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "paper_id",    :null => false
+  end
+
+  create_table "papers", :force => true do |t|
+    t.string   "title",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20110910063421) do
     t.string   "name",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "paper_id"
   end
 
   create_table "questions", :force => true do |t|
@@ -32,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20110910063421) do
     t.datetime "updated_at"
     t.integer  "question_type_id", :null => false
     t.string   "key"
+    t.integer  "paper_id"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
