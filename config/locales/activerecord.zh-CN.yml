@@ -221,6 +221,7 @@ zh-CN:
           name: '姓名'
           email: '电子邮箱'
           role: '角色'
+          answers: '答题记录'
           password: "密码"
           password_confirmation: "确认密码"
           reset_password_sent_at: '重置密码发送时间'
@@ -248,6 +249,8 @@ zh-CN:
           id: '编号'
           content: '答案'
           question: '题目'
+          user: '测试者'
+          paper: '试卷'
           created_at: '创建时间'
           updated_at: '更新时间'
         paper:

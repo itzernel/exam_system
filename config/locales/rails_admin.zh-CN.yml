@@ -10,6 +10,7 @@
       create: '创建'
       new: '新建'
       destroy: '删除'
+      export: '导出'
     dashboard:
       pagename: "网站管理"
       name: "控制面板"

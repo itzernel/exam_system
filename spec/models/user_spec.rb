@@ -8,6 +8,7 @@ describe User do
   it { Factory(:teacher)
     should validate_uniqueness_of :email
   }
+  it { should have_many :answers }
 
   describe '#role?' do
     before(:each) do

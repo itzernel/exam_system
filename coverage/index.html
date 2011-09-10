@@ -21,20 +21,20 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-10T21:30:57+08:00">2011-09-10T21:30:57+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-10T23:18:37+08:00">2011-09-10T23:18:37+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">77.08%</span>)
+    (<span class="red">78.0%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>48</b> relevant lines. 
-    <span class="green"><b>37</b> lines covered</span> and
+    <b>50</b> relevant lines. 
+    <span class="green"><b>39</b> lines covered</span> and
     <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -80,9 +80,9 @@
       <tr>
         <td><a href="#793f557ed4649c69112c87e61d3ee4d64558ea04" class="src_link" title="./app/models/answer.rb">./app/models/answer.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>6</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
       </tr>
       
@@ -115,10 +115,10 @@
       
       <tr>
         <td><a href="#8ae4080901c740fbf4427217ec515a29158d65ef" class="src_link" title="./app/models/user.rb">./app/models/user.rb</a></td>
-        <td class="yellow">90.0 %</td>
-        <td>22</td>
+        <td class="green">90.91 %</td>
+        <td>24</td>
+        <td>11</td>
         <td>10</td>
-        <td>9</td>
         <td>1</td>
       </tr>
       
@@ -168,13 +168,13 @@
           <div class="file_list_container" id="Models">
   <h2>
     Models
-    (<span class="yellow">81.08%</span>)
+    (<span class="yellow">82.05%</span>)
   </h2>
   <a name="Models"></a>
   <div>
     <b>6</b> files in total.
-    <b>37</b> relevant lines. 
-    <span class="green"><b>30</b> lines covered</span> and
+    <b>39</b> relevant lines. 
+    <span class="green"><b>32</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -202,9 +202,9 @@
       <tr>
         <td><a href="#793f557ed4649c69112c87e61d3ee4d64558ea04" class="src_link" title="./app/models/answer.rb">./app/models/answer.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>6</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
       </tr>
       
@@ -237,10 +237,10 @@
       
       <tr>
         <td><a href="#8ae4080901c740fbf4427217ec515a29158d65ef" class="src_link" title="./app/models/user.rb">./app/models/user.rb</a></td>
-        <td class="yellow">90.0 %</td>
-        <td>22</td>
+        <td class="green">90.91 %</td>
+        <td>24</td>
+        <td>11</td>
         <td>10</td>
-        <td>9</td>
         <td>1</td>
       </tr>
       
@@ -1215,9 +1215,22 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>5</pre>
+      </td>
+      <td>
+        <pre>  belongs_to :user</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>6</pre>
       </td>
       <td>
         <pre>end</pre>
@@ -1573,7 +1586,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/models/user.rb</h3>
-        <h4><span class="yellow">90.0 %</span> covered</h4>
+        <h4><span class="green">90.91 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -1733,6 +1746,32 @@
         <pre>12</pre>
       </td>
       <td>
+        <pre>  has_many :answers</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>13</pre>
+      </td>
+      <td>
+        <pre></pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>14</pre>
+      </td>
+      <td>
         <pre>  validates_presence_of :name</pre>
       </td>
       <td class="hits">
@@ -1743,7 +1782,7 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>13</pre>
+        <pre>15</pre>
       </td>
       <td>
         <pre>  validates_presence_of :role</pre>
@@ -1756,7 +1795,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>14</pre>
+        <pre>16</pre>
       </td>
       <td>
         <pre></pre>
@@ -1769,7 +1808,7 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>15</pre>
+        <pre>17</pre>
       </td>
       <td>
         <pre>  def is?(base_role)</pre>
@@ -1782,7 +1821,7 @@
     
     <tr class="miss" data-hits="0">
       <td class="line_number">
-        <pre>16</pre>
+        <pre>18</pre>
       </td>
       <td>
         <pre>    ROLES.index(base_role.to_s) &lt;= ROLES.index(role || 'students')</pre>
@@ -1795,7 +1834,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>17</pre>
+        <pre>19</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -1808,7 +1847,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>18</pre>
+        <pre>20</pre>
       </td>
       <td>
         <pre></pre>
@@ -1821,7 +1860,7 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>19</pre>
+        <pre>21</pre>
       </td>
       <td>
         <pre>  def role?(base_role)</pre>
@@ -1834,7 +1873,7 @@
     
     <tr class="hit" data-hits="2">
       <td class="line_number">
-        <pre>20</pre>
+        <pre>22</pre>
       </td>
       <td>
         <pre>    role == base_role.to_s</pre>
@@ -1847,7 +1886,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>21</pre>
+        <pre>23</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -1860,7 +1899,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>22</pre>
+        <pre>24</pre>
       </td>
       <td>
         <pre>end</pre>
