@@ -234,6 +234,7 @@ zh-CN:
           id: '编号'
           title: '题目'
           question_type: '题目类型'
+          key: '正确答案'
           created_at: '创建时间'
           updated_at: '更新时间'
         question_type:

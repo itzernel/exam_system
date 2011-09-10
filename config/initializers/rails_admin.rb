@@ -37,6 +37,7 @@ RailsAdmin.config do |config|
       list do
         field :title
         field :question_type, :belongs_to_association
+        field :key
       end
       edit do
         field :question_type, :belongs_to_association
@@ -45,6 +46,7 @@ RailsAdmin.config do |config|
             true
           end
         end
+        field :key
       end
     end
   end
