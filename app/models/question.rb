@@ -4,4 +4,5 @@ class Question < ActiveRecord::Base
 
   has_many :answers
   belongs_to :question_type
+  belongs_to :paper
 end
