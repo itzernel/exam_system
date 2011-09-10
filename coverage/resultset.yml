@@ -90,6 +90,15 @@ RSpec:
     - 1
     - !!null 
     - 1
+    - 1
+    - !!null 
+    /home/jeweller/workspaces/exam_system/app/models/paper.rb:
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 1
+    - 1
     - !!null 
     /home/jeweller/workspaces/exam_system/app/models/question.rb:
     - 1
@@ -98,11 +107,13 @@ RSpec:
     - !!null 
     - 1
     - 1
+    - 1
     - !!null 
     /home/jeweller/workspaces/exam_system/app/models/question_type.rb:
     - 1
     - 1
     - !!null 
     - 1
+    - 1
     - !!null 
-  :created_at: 2011-09-10 15:21:36.556156515 +08:00
+  :created_at: 2011-09-10 16:39:28.376565529 +08:00

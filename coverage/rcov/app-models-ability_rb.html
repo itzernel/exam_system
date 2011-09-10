@@ -78,7 +78,7 @@
           <td><pre><a name="line10">10</a>       can(:manage, :all) if user.role? :admin</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line11">11</a>       can(:manage, [Question, QuestionType]) if user.role? :teacher</pre></td>
+          <td><pre><a name="line11">11</a>       can(:manage, [Question, QuestionType, Answer]) if user.role? :teacher</pre></td>
         </tr>
         <tr class="inferred">
           <td><pre><a name="line12">12</a>     end</pre></td>
@@ -161,7 +161,7 @@
       </tbody>
     </table>
 
-    <p>Generated on 2011/09/10 03:21 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/10 04:39 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
