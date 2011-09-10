@@ -57,4 +57,16 @@ RailsAdmin.config do |config|
     end
   end
 
+  if Answer.table_exists?
+    config.model Answer do
+      edit do
+        field :question, :belongs_to_association
+        field :content, :text do
+          ckeditor do
+            true
+          end
+        end
+      end
+    end
+  end
 end

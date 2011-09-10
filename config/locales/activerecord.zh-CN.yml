@@ -213,6 +213,7 @@ zh-CN:
       user: '用户'
       question: '题目'
       question_type: '题目类型'
+      answer: '学生答案'
     attributes:
         user:
           id: '编号'
@@ -240,6 +241,12 @@ zh-CN:
         question_type:
           name: '类型'
           questions: '题目'
+          created_at: '创建时间'
+          updated_at: '更新时间'
+        answer: 
+          id: '编号'
+          content: '答案'
+          question: '题目'
           created_at: '创建时间'
           updated_at: '更新时间'
 
