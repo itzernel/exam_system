@@ -1,21 +1,17 @@
 FactoryGirl.define do
-  factory :teacher, :class => :user do |f|
-    name "Jeweller"
-    email do |u|
-      "#{u.name}@exam.com"
-    end
+  factory :teacher, :class => :user do
+    name "teacher"
+    email { "#{name}@exam.com" }
     password '123456'
-    password_confirmation '123456'
-    role 'teachers'
-  end
+    password_confirmation { password }
+    role { name }
 
-  factory :student, :parent => :teacher do
-    name 'Ruby'
-    role 'student'
-  end
+    factory :student do
+      name 'student'
+    end
 
-  factory :admin, :parent => :teacher do
-    name 'admin'
-    role 'admins'
+    factory :admin do
+      name 'admin'
+    end
   end
 end
