@@ -21,20 +21,20 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-10T12:46:58+08:00">2011-09-10T12:46:58+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-10T15:21:36+08:00">2011-09-10T15:21:36+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">70.27%</span>)
+    (<span class="red">72.5%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>6</b> files in total.
-    <b>37</b> relevant lines. 
-    <span class="green"><b>26</b> lines covered</span> and
+    <b>7</b> files in total.
+    <b>40</b> relevant lines. 
+    <span class="green"><b>29</b> lines covered</span> and
     <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -78,11 +78,20 @@
       </tr>
       
       <tr>
+        <td><a href="#793f557ed4649c69112c87e61d3ee4d64558ea04" class="src_link" title="./app/models/answer.rb">./app/models/answer.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
         <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>6</td>
-        <td>4</td>
-        <td>4</td>
+        <td>7</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
       </tr>
       
@@ -150,13 +159,13 @@
           <div class="file_list_container" id="Models">
   <h2>
     Models
-    (<span class="red">73.08%</span>)
+    (<span class="red">75.86%</span>)
   </h2>
   <a name="Models"></a>
   <div>
-    <b>4</b> files in total.
-    <b>26</b> relevant lines. 
-    <span class="green"><b>19</b> lines covered</span> and
+    <b>5</b> files in total.
+    <b>29</b> relevant lines. 
+    <span class="green"><b>22</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -182,11 +191,20 @@
       </tr>
       
       <tr>
+        <td><a href="#793f557ed4649c69112c87e61d3ee4d64558ea04" class="src_link" title="./app/models/answer.rb">./app/models/answer.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
         <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>6</td>
-        <td>4</td>
-        <td>4</td>
+        <td>7</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
       </tr>
       
@@ -1109,6 +1127,79 @@
   </table>
 </div>
       
+        <div class="source_table" id="793f557ed4649c69112c87e61d3ee4d64558ea04">
+  <table>
+    <thead>
+    <tr>
+      <td colspan="3">
+        <h3>./app/models/answer.rb</h3>
+        <h4><span class="green">100.0 %</span> covered</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th>Hits</th>
+    </tr>
+    </thead>
+    <tbody>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>1</pre>
+      </td>
+      <td>
+        <pre>class Answer &lt; ActiveRecord::Base</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>2</pre>
+      </td>
+      <td>
+        <pre></pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>3</pre>
+      </td>
+      <td>
+        <pre>  belongs_to :question</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>4</pre>
+      </td>
+      <td>
+        <pre>end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    </tbody>
+  </table>
+</div>
+      
         <div class="source_table" id="5b677d9c71d552f8b1b34b006fa3d5e431406ea9">
   <table>
     <thead>
@@ -1184,6 +1275,19 @@
         <pre>5</pre>
       </td>
       <td>
+        <pre>  has_many :answers</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>6</pre>
+      </td>
+      <td>
         <pre>  belongs_to :question_type</pre>
       </td>
       <td class="hits">
@@ -1194,7 +1298,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>6</pre>
+        <pre>7</pre>
       </td>
       <td>
         <pre>end</pre>

@@ -7,4 +7,5 @@ describe Question do
     should validate_uniqueness_of :title
   }
   it { should belong_to :question_type }
+  it { should have_many :answers }
 end

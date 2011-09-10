@@ -7,7 +7,7 @@ class Ability
     if not user.role? :student
       can :access, :rails_admin
       can(:manage, :all) if user.role? :admin
-      can(:manage, [Question, QuestionType]) if user.role? :teacher
+      can(:manage, [Question, QuestionType, Answer]) if user.role? :teacher
     end
     
     # Define abilities for the passed in user here. For example:
