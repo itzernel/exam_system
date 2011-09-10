@@ -25,17 +25,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-user_rb.html">app/models/user.rb</a></td>
-            <td class='right_align'><tt>22</tt></td>
-            <td class='right_align'><tt>10</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>95.45%</tt></div>
+            <td class='right_align'><tt>24</tt></td>
+            <td class='right_align'><tt>11</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>95.83%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:95px"></div>
-        <div class="uncovered" style="width:5px"></div>
+        <div class="covered" style="width:96px"></div>
+        <div class="uncovered" style="width:4px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.91%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:90px"></div>
-        <div class="uncovered" style="width:10px"></div>
+        <div class="covered" style="width:91px"></div>
+        <div class="uncovered" style="width:9px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -84,42 +84,48 @@
           <td><pre><a name="line12">12</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line13">13</a>   validates_presence_of :name</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line14">14</a>   validates_presence_of :role</pre></td>
+          <td><pre><a name="line13">13</a>   has_many :answers</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line15">15</a> </pre></td>
+          <td><pre><a name="line14">14</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line16">16</a>   def is?(base_role)</pre></td>
+          <td><pre><a name="line15">15</a>   validates_presence_of :name</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line16">16</a>   validates_presence_of :role</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line18">18</a>   def is?(base_role)</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line17">17</a>     ROLES.index(base_role.to_s) &lt;= ROLES.index(role || 'students')</pre></td>
+          <td><pre><a name="line19">19</a>     ROLES.index(base_role.to_s) &lt;= ROLES.index(role || 'students')</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line18">18</a>   end</pre></td>
+          <td><pre><a name="line20">20</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line19">19</a> </pre></td>
+          <td><pre><a name="line21">21</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line20">20</a>   def role?(base_role)</pre></td>
+          <td><pre><a name="line22">22</a>   def role?(base_role)</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line21">21</a>     role == base_role.to_s</pre></td>
+          <td><pre><a name="line23">23</a>     role == base_role.to_s</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line22">22</a>   end</pre></td>
+          <td><pre><a name="line24">24</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line23">23</a> end</pre></td>
+          <td><pre><a name="line25">25</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2011/09/10 09:30 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/10 11:18 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
