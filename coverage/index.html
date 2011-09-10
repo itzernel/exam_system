@@ -21,20 +21,20 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-10T15:21:36+08:00">2011-09-10T15:21:36+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2011-09-10T16:39:28+08:00">2011-09-10T16:39:28+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">72.5%</span>)
+    (<span class="red">77.08%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>7</b> files in total.
-    <b>40</b> relevant lines. 
-    <span class="green"><b>29</b> lines covered</span> and
+    <b>8</b> files in total.
+    <b>48</b> relevant lines. 
+    <span class="green"><b>37</b> lines covered</span> and
     <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -80,14 +80,14 @@
       <tr>
         <td><a href="#793f557ed4649c69112c87e61d3ee4d64558ea04" class="src_link" title="./app/models/answer.rb">./app/models/answer.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>4</td>
-        <td>2</td>
-        <td>2</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
       </tr>
       
       <tr>
-        <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
+        <td><a href="#452b0aeda7233467c463e11f9cbaaab1cc8d1eae" class="src_link" title="./app/models/paper.rb">./app/models/paper.rb</a></td>
         <td class="green">100.0 %</td>
         <td>7</td>
         <td>5</td>
@@ -96,11 +96,20 @@
       </tr>
       
       <tr>
+        <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>8</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
         <td><a href="#5753b941ac839de9ab5e76629218f1087db2058b" class="src_link" title="./app/models/question_type.rb">./app/models/question_type.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>6</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
       </tr>
       
@@ -159,13 +168,13 @@
           <div class="file_list_container" id="Models">
   <h2>
     Models
-    (<span class="red">75.86%</span>)
+    (<span class="yellow">81.08%</span>)
   </h2>
   <a name="Models"></a>
   <div>
-    <b>5</b> files in total.
-    <b>29</b> relevant lines. 
-    <span class="green"><b>22</b> lines covered</span> and
+    <b>6</b> files in total.
+    <b>37</b> relevant lines. 
+    <span class="green"><b>30</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -193,14 +202,14 @@
       <tr>
         <td><a href="#793f557ed4649c69112c87e61d3ee4d64558ea04" class="src_link" title="./app/models/answer.rb">./app/models/answer.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>4</td>
-        <td>2</td>
-        <td>2</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
       </tr>
       
       <tr>
-        <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
+        <td><a href="#452b0aeda7233467c463e11f9cbaaab1cc8d1eae" class="src_link" title="./app/models/paper.rb">./app/models/paper.rb</a></td>
         <td class="green">100.0 %</td>
         <td>7</td>
         <td>5</td>
@@ -209,11 +218,20 @@
       </tr>
       
       <tr>
+        <td><a href="#5b677d9c71d552f8b1b34b006fa3d5e431406ea9" class="src_link" title="./app/models/question.rb">./app/models/question.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>8</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
         <td><a href="#5753b941ac839de9ab5e76629218f1087db2058b" class="src_link" title="./app/models/question_type.rb">./app/models/question_type.rb</a></td>
         <td class="green">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>6</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
       </tr>
       
@@ -778,7 +796,7 @@
         <pre>10</pre>
       </td>
       <td>
-        <pre>      can(:manage, [Question, QuestionType]) if user.role? :teacher</pre>
+        <pre>      can(:manage, [Question, QuestionType, Answer]) if user.role? :teacher</pre>
       </td>
       <td class="hits">
         0
@@ -1184,9 +1202,134 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>4</pre>
+      </td>
+      <td>
+        <pre>  belongs_to :paper</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>5</pre>
+      </td>
+      <td>
+        <pre>end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    </tbody>
+  </table>
+</div>
+      
+        <div class="source_table" id="452b0aeda7233467c463e11f9cbaaab1cc8d1eae">
+  <table>
+    <thead>
+    <tr>
+      <td colspan="3">
+        <h3>./app/models/paper.rb</h3>
+        <h4><span class="green">100.0 %</span> covered</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th>Hits</th>
+    </tr>
+    </thead>
+    <tbody>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>1</pre>
+      </td>
+      <td>
+        <pre>class Paper &lt; ActiveRecord::Base</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>2</pre>
+      </td>
+      <td>
+        <pre>  validates :title, :presence =&gt; true</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>3</pre>
+      </td>
+      <td>
+        <pre></pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>4</pre>
+      </td>
+      <td>
+        <pre>  has_many :questions</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>5</pre>
+      </td>
+      <td>
+        <pre>  has_many :question_types</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="1">
+      <td class="line_number">
+        <pre>6</pre>
+      </td>
+      <td>
+        <pre>  has_many :answers</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>7</pre>
       </td>
       <td>
         <pre>end</pre>
@@ -1296,9 +1439,22 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>7</pre>
+      </td>
+      <td>
+        <pre>  belongs_to :paper</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>8</pre>
       </td>
       <td>
         <pre>end</pre>
@@ -1382,9 +1538,22 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>5</pre>
+      </td>
+      <td>
+        <pre>  belongs_to :paper</pre>
+      </td>
+      <td class="hits">
+        1
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>6</pre>
       </td>
       <td>
         <pre>end</pre>

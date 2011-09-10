@@ -214,6 +214,7 @@ zh-CN:
       question: '题目'
       question_type: '题目类型'
       answer: '学生答案'
+      paper: '试卷'
     attributes:
         user:
           id: '编号'
@@ -249,6 +250,15 @@ zh-CN:
           question: '题目'
           created_at: '创建时间'
           updated_at: '更新时间'
+        paper:
+          id: '编号'
+          title: '试卷名称'
+          question_types: '题目类型'
+          questions: '题目'
+          answers: '学生答案'
+          created_at: '创建时间'
+          updated_at: '更新时间'
+
 
 
   activemodel:
