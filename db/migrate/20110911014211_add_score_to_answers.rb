@@ -1,6 +1,6 @@
 class AddScoreToAnswers < ActiveRecord::Migration
   def self.up
-    add_column :answers, :score, :integer
+    add_column :answers, :score, :integer, :default => 0
   end
 
   def self.down

@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(:version => 20110911014244) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
-    t.integer  "question_id", :null => false
+    t.integer  "question_id",                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "paper_id",    :null => false
-    t.integer  "user_id",     :null => false
-    t.integer  "score"
+    t.integer  "paper_id",                   :null => false
+    t.integer  "user_id",                    :null => false
+    t.integer  "score",       :default => 0
   end
 
   create_table "papers", :force => true do |t|
