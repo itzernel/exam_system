@@ -9,7 +9,7 @@ describe Answer do
   it { should belong_to :user }
 
   context 'correctness and scores' do
-    let(:paper) { Factory(:paper) }
+    let(:paper) { Factory(:paper_with_question_types) }
     let(:student) { Factory(:student) }
     let(:right_answer) { Factory(:answer, :paper => paper, :user => student) }
     let(:wrong_answer) { Factory(:answer, :content => '50', :paper => paper, :user => student) }
