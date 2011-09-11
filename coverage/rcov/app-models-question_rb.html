@@ -25,8 +25,8 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-question_rb.html">app/models/question.rb</a></td>
-            <td class='right_align'><tt>8</tt></td>
-            <td class='right_align'><tt>6</tt></td>
+            <td class='right_align'><tt>21</tt></td>
+            <td class='right_align'><tt>13</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -50,34 +50,73 @@
 
     <table class="details">
       <tbody>
-        <tr class="marked">
-          <td><pre><a name="line2">2</a> class Question &lt; ActiveRecord::Base</pre></td>
+        <tr class="inferred">
+          <td><pre><a name="line2">2</a> # encoding: UTF-8</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line3">3</a>   validates :title, :presence =&gt; true, :uniqueness =&gt; true</pre></td>
+          <td><pre><a name="line3">3</a> class Question &lt; ActiveRecord::Base</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line4">4</a>   validates :key, :presence =&gt; true</pre></td>
+          <td><pre><a name="line4">4</a>   validates :title, :presence =&gt; true, :uniqueness =&gt; true</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line5">5</a>   validates :key, :presence =&gt; true</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line6">6</a>   validates :score, :presence =&gt; true</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line7">7</a>   validates_numericality_of :score, :greater_than =&gt; 0, :less_than_or_equal_to =&gt; 50</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line5">5</a> </pre></td>
+          <td><pre><a name="line8">8</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line6">6</a>   has_many :answers</pre></td>
+          <td><pre><a name="line9">9</a>   has_many :answers</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line7">7</a>   belongs_to :question_type</pre></td>
+          <td><pre><a name="line10">10</a>   belongs_to :question_type</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line8">8</a>   belongs_to :paper</pre></td>
+          <td><pre><a name="line11">11</a>   belongs_to :paper</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line9">9</a> end</pre></td>
+          <td><pre><a name="line12">12</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line13">13</a>   delegate :name, :to =&gt; :question_type, :prefix =&gt; true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line14">14</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line15">15</a>   def type_of_multiple_choice_question?</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line16">16</a>     question_type_name == '选择题'</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line17">17</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line18">18</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line19">19</a>   def type_of_true_false_question?</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line20">20</a>     question_type_name == '判断题'</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line21">21</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line22">22</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2011/09/10 11:18 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/11 08:35 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>

@@ -113,12 +113,27 @@ RSpec:
     - !!null 
     /home/jeweller/workspaces/exam_system/app/models/answer.rb:
     - 1
+    - 1
     - !!null 
     - 1
     - 1
     - 1
+    - !!null 
+    - 1
+    - 1
+    - !!null 
+    - 1
+    - 6
+    - !!null 
+    - !!null 
+    - 1
+    - 5
+    - 5
+    - !!null 
+    - !!null 
     - !!null 
     /home/jeweller/workspaces/exam_system/app/models/paper.rb:
+    - 1
     - 1
     - 1
     - !!null 
@@ -127,6 +142,9 @@ RSpec:
     - 1
     - !!null 
     /home/jeweller/workspaces/exam_system/app/models/question.rb:
+    - !!null 
+    - 1
+    - 1
     - 1
     - 1
     - 1
@@ -134,6 +152,16 @@ RSpec:
     - 1
     - 1
     - 1
+    - !!null 
+    - 1
+    - !!null 
+    - 1
+    - 7
+    - !!null 
+    - !!null 
+    - 1
+    - 2
+    - !!null 
     - !!null 
     /home/jeweller/workspaces/exam_system/app/models/question_type.rb:
     - 1
@@ -142,4 +170,10 @@ RSpec:
     - 1
     - 1
     - !!null 
-  :created_at: 2011-09-10 23:18:36.989170970 +08:00
+    /home/jeweller/workspaces/exam_system/app/observers/answer_observer.rb:
+    - 1
+    - 1
+    - 4
+    - !!null 
+    - !!null 
+  :created_at: 2011-09-11 20:35:31.457166867 +08:00

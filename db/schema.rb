@@ -11,21 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110910145723) do
+ActiveRecord::Schema.define(:version => 20110911014244) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
-    t.integer  "question_id", :null => false
+    t.integer  "question_id",                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "paper_id",    :null => false
-    t.integer  "user_id",     :null => false
+    t.integer  "paper_id",                   :null => false
+    t.integer  "user_id",                    :null => false
+    t.integer  "score",       :default => 0
   end
 
   create_table "papers", :force => true do |t|
     t.string   "title",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "score"
   end
 
   create_table "question_types", :force => true do |t|
@@ -42,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20110910145723) do
     t.integer  "question_type_id", :null => false
     t.string   "key"
     t.integer  "paper_id"
+    t.integer  "score",            :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|

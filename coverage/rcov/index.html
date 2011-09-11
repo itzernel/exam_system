@@ -19,7 +19,7 @@
         <label>File Filter:</label>
         <select id="file_filter" class="filter">
           <option value="all_files">Show All</option>
-          <option value="app">app/</option><option value="controllers">controllers/</option><option value="helpers">helpers/</option><option value="models">models/</option>
+          <option value="app">app/</option><option value="controllers">controllers/</option><option value="helpers">helpers/</option><option value="models">models/</option><option value="observers">observers/</option>
         </select>
       </fieldset>
       <fieldset>
@@ -46,17 +46,17 @@
         <tfoot>
           <tr>
             <td class="left_align">TOTAL</td>
-            <td class='right_align'><tt>107</tt></td>
-            <td class='right_align'><tt>50</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>89.72%</tt></div>
+            <td class='right_align'><tt>140</tt></td>
+            <td class='right_align'><tt>69</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>92.14%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:90px"></div>
-        <div class="uncovered" style="width:10px"></div>
+        <div class="covered" style="width:92px"></div>
+        <div class="uncovered" style="width:8px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class='coverage_total'>78.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class='coverage_total'>84.06%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:78px"></div>
-        <div class="uncovered" style="width:22px"></div>
+        <div class="covered" style="width:84px"></div>
+        <div class="uncovered" style="width:16px"></div>
       </div></td>
           </tr>
         </tfoot>
@@ -112,8 +112,8 @@
           
             <tr class="all_files all_coverage 110 app models odd">
               <td class="left_align"><a href="app-models-answer_rb.html">app/models/answer.rb</a></td>
-              <td class='right_align'><tt>6</tt></td>
-              <td class='right_align'><tt>4</tt></td>
+              <td class='right_align'><tt>20</tt></td>
+              <td class='right_align'><tt>12</tt></td>
               <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -128,8 +128,8 @@
           
             <tr class="all_files all_coverage 110 app models even">
               <td class="left_align"><a href="app-models-paper_rb.html">app/models/paper.rb</a></td>
-              <td class='right_align'><tt>7</tt></td>
-              <td class='right_align'><tt>5</tt></td>
+              <td class='right_align'><tt>8</tt></td>
+              <td class='right_align'><tt>6</tt></td>
               <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -144,8 +144,8 @@
           
             <tr class="all_files all_coverage 110 app models odd">
               <td class="left_align"><a href="app-models-question_rb.html">app/models/question.rb</a></td>
-              <td class='right_align'><tt>8</tt></td>
-              <td class='right_align'><tt>6</tt></td>
+              <td class='right_align'><tt>21</tt></td>
+              <td class='right_align'><tt>13</tt></td>
               <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -190,11 +190,27 @@
       </div></td>
             </tr>
           
+            <tr class="all_files all_coverage 110 app observers even">
+              <td class="left_align"><a href="app-observers-answer_observer_rb.html">app/observers/answer_observer.rb</a></td>
+              <td class='right_align'><tt>5</tt></td>
+              <td class='right_align'><tt>3</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:100px"></div>
+        <div class="uncovered" style="width:0px"></div>
+      </div></td>
+            </tr>
+          
         </tbody>
       </table>
     </div>
 
-    <p>Generated on 2011/09/10 11:18 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/11 08:35 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
     <script type="text/javascript">
       $(document).ready(function(){$("#report_table").tablesorter({widgets: ['zebra'], textExtraction: 'complex'});});

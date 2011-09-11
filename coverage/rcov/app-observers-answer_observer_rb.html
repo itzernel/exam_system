@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>app/models/paper.rb</title>
+    <title>app/observers/answer_observer.rb</title>
     <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
     <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Exam system C0 Coverage Information - Simploco - RCov</h1>
-    <h2>app/models/paper.rb</h2>
+    <h2>app/observers/answer_observer.rb</h2>
 
     <div class="report_table_wrapper">
       <table class='report' id='report_table'>
@@ -24,9 +24,9 @@
         </thead>
         <tbody>
           <tr>
-            <td class="left_align"><a href="app-models-paper_rb.html">app/models/paper.rb</a></td>
-            <td class='right_align'><tt>8</tt></td>
-            <td class='right_align'><tt>6</tt></td>
+            <td class="left_align"><a href="app-observers-answer_observer_rb.html">app/observers/answer_observer.rb</a></td>
+            <td class='right_align'><tt>5</tt></td>
+            <td class='right_align'><tt>3</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -51,28 +51,19 @@
     <table class="details">
       <tbody>
         <tr class="marked">
-          <td><pre><a name="line2">2</a> class Paper &lt; ActiveRecord::Base</pre></td>
+          <td><pre><a name="line2">2</a> class AnswerObserver &lt; ActiveRecord::Observer</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line3">3</a>   validates :title, :presence =&gt; true</pre></td>
+          <td><pre><a name="line3">3</a>   def after_create(answer)</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line4">4</a>   validates_numericality_of :score, :greater_than_or_equal_to =&gt; 0, :less_than_or_equal_to =&gt; 100</pre></td>
+          <td><pre><a name="line4">4</a>     answer.auto_calculate</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line5">5</a> </pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line6">6</a>   has_many :questions</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line7">7</a>   has_many :question_types</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line8">8</a>   has_many :answers</pre></td>
+          <td><pre><a name="line5">5</a>   end  </pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line9">9</a> end</pre></td>
+          <td><pre><a name="line6">6</a> end</pre></td>
         </tr>
       </tbody>
     </table>

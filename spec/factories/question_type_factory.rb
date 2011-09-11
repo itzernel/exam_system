@@ -5,6 +5,7 @@ FactoryGirl.define do
   end
 
   factory :question_type_with_questions, :parent => :question_type do
-   after_create{ |qt| 5.times { Factory(:question, :question_type => qt) } }
+    name '填空题'
+    after_create{ |qt| Factory(:question, :title => '你是____', :question_type => qt) }
   end
 end
