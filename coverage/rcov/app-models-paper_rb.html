@@ -25,8 +25,8 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-paper_rb.html">app/models/paper.rb</a></td>
-            <td class='right_align'><tt>7</tt></td>
-            <td class='right_align'><tt>5</tt></td>
+            <td class='right_align'><tt>8</tt></td>
+            <td class='right_align'><tt>6</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -56,25 +56,28 @@
         <tr class="marked">
           <td><pre><a name="line3">3</a>   validates :title, :presence =&gt; true</pre></td>
         </tr>
-        <tr class="inferred">
-          <td><pre><a name="line4">4</a> </pre></td>
-        </tr>
         <tr class="marked">
-          <td><pre><a name="line5">5</a>   has_many :questions</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line6">6</a>   has_many :question_types</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line7">7</a>   has_many :answers</pre></td>
+          <td><pre><a name="line4">4</a>   validates_numericality_of :score, :greater_than_or_equal_to =&gt; 0, :less_than_or_equal_to =&gt; 100</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line8">8</a> end</pre></td>
+          <td><pre><a name="line5">5</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line6">6</a>   has_many :questions</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line7">7</a>   has_many :question_types</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line8">8</a>   has_many :answers</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line9">9</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2011/09/10 11:18 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/11 08:35 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>

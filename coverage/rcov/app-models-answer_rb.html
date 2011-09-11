@@ -25,8 +25,8 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-models-answer_rb.html">app/models/answer.rb</a></td>
-            <td class='right_align'><tt>6</tt></td>
-            <td class='right_align'><tt>4</tt></td>
+            <td class='right_align'><tt>20</tt></td>
+            <td class='right_align'><tt>12</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
       <div class="percent_graph">
         <div class="covered" style="width:100px"></div>
@@ -53,25 +53,67 @@
         <tr class="marked">
           <td><pre><a name="line2">2</a> class Answer &lt; ActiveRecord::Base</pre></td>
         </tr>
-        <tr class="inferred">
-          <td><pre><a name="line3">3</a> </pre></td>
-        </tr>
         <tr class="marked">
-          <td><pre><a name="line4">4</a>   belongs_to :question</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line5">5</a>   belongs_to :paper</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line6">6</a>   belongs_to :user</pre></td>
+          <td><pre><a name="line3">3</a>   validates_numericality_of :score, :greater_than_or_equal_to =&gt; 0, :less_than_or_equal_to =&gt; 50</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line7">7</a> end</pre></td>
+          <td><pre><a name="line4">4</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line5">5</a>   belongs_to :question</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line6">6</a>   belongs_to :paper</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line7">7</a>   belongs_to :user</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line8">8</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line9">9</a>   delegate :key, :type_of_multiple_choice_question?, :type_of_true_false_question?, :to =&gt; :question</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line10">10</a>   delegate :score, :to =&gt; :question, :prefix =&gt; true</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line11">11</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line12">12</a>   def correct?</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line13">13</a>     content == key</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line14">14</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line15">15</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line16">16</a>   def auto_calculate</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line17">17</a>     if type_of_multiple_choice_question? || type_of_true_false_question?</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line18">18</a>       update_attribute(:score, question_score) if correct?</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line19">19</a>     end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line20">20</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line21">21</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2011/09/10 11:18 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2011/09/11 08:35 PM with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
