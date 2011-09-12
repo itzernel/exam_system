@@ -6,6 +6,10 @@ FactoryGirl.define do
 
     factory :paper_with_question_types do
       after_create { |p| Factory(:question_type_with_questions, :paper => p) } 
+
+      factory :paper_with_questions_and_question_types do
+        after_create { |p| Factory(:question, :paper => p) }
+      end
     end
   end
 end
