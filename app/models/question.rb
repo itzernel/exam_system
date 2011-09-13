@@ -4,8 +4,7 @@ class Question < ActiveRecord::Base
   include Api::Question
 
   validates :title, :presence => true, :uniqueness => true
-  validates :key, :presence => true
-  validates :score, :presence => true
+  validates :key, :score, :presence => true
   validates_numericality_of :score, :greater_than => 0, :less_than_or_equal_to => 50
 
   has_many :answers

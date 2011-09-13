@@ -11,8 +11,7 @@ class User < ActiveRecord::Base
 
   has_many :answers
 
-  validates_presence_of :name
-  validates_presence_of :role
+  validates :name, :role, :presence => true
 
   def is?(base_role)
     ROLES.index(base_role.to_s) <= ROLES.index(role || 'students')
