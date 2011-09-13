@@ -1,13 +1,15 @@
 module Api::Paper
   extend ActiveSupport::Concern
-  include do
+  included do
     api_accessible :paper do |template|
       template.add :title
       template.add :score
-      template.add :questions, :temlate => :public
     end
 
-    api_accessible :paper_with_answers, :extend => :paper do |template|
+    api_accessible :paper_with_questions, :extend => :paper do |template|
+      template.add :questions, :temlate => :public
+    end
+    api_accessible :paper_with_questions_and_answers, :extend => :paper_with_questions do |template|
       template.add :questions, :template => :private
     end
   end

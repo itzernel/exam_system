@@ -3,6 +3,7 @@ ExamSystem::Application.routes.draw do
   devise_scope :user do
     root :to => 'devise/sessions#new'
   end
+  resources :papers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

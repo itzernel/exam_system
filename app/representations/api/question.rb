@@ -1,6 +1,6 @@
 module Api::Question
   extend ActiveSupport::Concern
-  include do
+  included do
     api_accessible :public do |template|
       template.add :title
       template.add :score

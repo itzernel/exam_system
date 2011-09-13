@@ -1,5 +1,8 @@
 # encoding: UTF-8
 class Question < ActiveRecord::Base
+  acts_as_api
+  include Api::Question
+
   validates :title, :presence => true, :uniqueness => true
   validates :key, :presence => true
   validates :score, :presence => true
@@ -10,6 +13,8 @@ class Question < ActiveRecord::Base
   belongs_to :paper
 
   delegate :name, :to => :question_type, :prefix => true
+
+  scope :in_a_paper, lambda { |paper| where(:paper_id => paper) }
 
   def type_of_multiple_choice_question?
     question_type_name == '选择题'
