@@ -4,6 +4,6 @@ FactoryGirl.define do
     title "请问你几岁？"
     key '20'
     score 2
-    question_type
+    question_type { QuestionType.last || Factory(:question_type) }
   end
 end

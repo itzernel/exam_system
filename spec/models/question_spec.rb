@@ -40,4 +40,17 @@ describe Question do
       end
     end
   end
+
+  describe '.in_a_paper' do
+    before do
+      @paper = Factory(:paper)
+      @question1 = Factory(:question, :paper => @paper)
+      @question2 = Factory(:question, :title => "another question")
+    end
+    it 'returns questions in a same paper' do
+      questions = Question.in_a_paper(@paper)
+      questions.should include(@question1)
+      questions.should_not include(@question2)
+    end
+  end
 end
