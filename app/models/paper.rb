@@ -13,6 +13,6 @@ class Paper < ActiveRecord::Base
   end
 
   def set_score
-    update_attribute(:score, calculate_score)
+    update_attributes(:score => calculate_score)
   end
 end
