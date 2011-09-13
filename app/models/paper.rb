@@ -1,4 +1,7 @@
 class Paper < ActiveRecord::Base
+  acts_as_api
+  include Api::Paper
+
   after_create :set_score
 
   validates :title, :presence => true
