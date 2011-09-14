@@ -53,4 +53,16 @@ describe Question do
       questions.should_not include(@question2)
     end
   end
+
+  describe '.same_type' do
+    let(:question_type) { Factory(:question_type_with_questions) }
+    let(:question1) { Factory(:question) }
+    let(:question2) { question_type.questions.first }
+
+    it 'returns questions belongs to a same question type' do
+      questions = Question.same_type(question_type)
+      questions.should include(question2)
+      questions.should_not include(question1)
+    end
+  end
 end

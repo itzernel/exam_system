@@ -14,6 +14,7 @@ class Question < ActiveRecord::Base
   delegate :name, :to => :question_type, :prefix => true
 
   scope :in_a_paper, lambda { |paper| where(:paper_id => paper) }
+  scope :same_type, lambda { |type| where(:question_type_id => type) }
 
   def type_of_multiple_choice_question?
     question_type_name == '选择题'
