@@ -2,6 +2,7 @@ module Api::Question
   extend ActiveSupport::Concern
   included do
     api_accessible :public do |template|
+      template.add :id
       template.add :title
       template.add :score
       template.add lambda { |question| question.question_type.name }, :as => :question_type 

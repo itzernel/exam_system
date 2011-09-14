@@ -5,10 +5,10 @@ FactoryGirl.define do
     score 100
 
     factory :paper_with_question_types do
-      after_create { |p| Factory(:question_type_with_questions, :paper => p) } 
+      after_create { |p| p.question_types <<  Factory(:question_type_with_questions, :paper => p) } 
 
       factory :paper_with_questions_and_question_types do
-        after_create { |p| Factory(:question, :paper => p) }
+        after_create { |p| p.questions <<  Factory(:question, :paper => p) }
       end
     end
   end
