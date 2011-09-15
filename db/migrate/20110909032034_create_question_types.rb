@@ -1,7 +1,7 @@
 class CreateQuestionTypes < ActiveRecord::Migration
   def self.up
     create_table :question_types do |t|
-      t.string :name, :null => false
+      t.integer :type_cd
 
       t.timestamps
     end

@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20110911014244) do
   end
 
   create_table "question_types", :force => true do |t|
-    t.string   "name",       :null => false
+    t.integer  "type_cd"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "paper_id"
