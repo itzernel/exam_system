@@ -18,7 +18,7 @@ describe Question do
   context 'question type' do
     before(:each) do
       @multiple_choice_question = FactoryGirl.build(:question)
-      true_false = Factory(:question_type, :name => '判断题')
+      true_false = Factory(:question_type, :type_cd => 1)
       @true_false_question = FactoryGirl.build(:question, :question_type => true_false)
     end
 

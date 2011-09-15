@@ -54,6 +54,15 @@ RailsAdmin.config do |config|
   if QuestionType.table_exists? 
     config.model QuestionType do
       parent Question
+      edit do
+        field :name
+        field :type_cd, :enum do
+          enum_method do
+            :type_enum
+          end
+        end
+        field :paper
+      end
     end
   end
 

@@ -5,7 +5,7 @@ module Api::Question
       template.add :id
       template.add :title
       template.add :score
-      template.add lambda { |question| question.question_type.name }, :as => :question_type 
+      template.add lambda { |question| question.question_type.type }, :as => :question_type 
     end
 
     api_accessible :private, :extend => :public do |template|

@@ -209,6 +209,15 @@ zh-CN:
         even: "必须为双数"
         taken: "已经被使用"
         record_invalid: "校验失败: %{errors}"
+    enums:
+      question_type:
+        types:
+          multiple_choice: '选择题'
+          true_false: '判断题'
+          blank_filling: '填空题'
+          short_answer: '简答题'
+          calculation: '计算题'
+          essey_writing: '论述题'
     models:
       user: '用户'
       question: '题目'
@@ -242,6 +251,7 @@ zh-CN:
           updated_at: '更新时间'
         question_type:
           name: '类型'
+          type_cd: '类型类型'
           questions: '题目'
           created_at: '创建时间'
           updated_at: '更新时间'

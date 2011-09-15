@@ -10,6 +10,8 @@
     signup: '注册'
   titles:
     signin: '登录'
+    papers: '试卷列表'
+    show_paper_detail: '试卷内容'
   errors:
     messages:
       internal_error: '服务器发生内部错误，请重试或联系管理员。'

@@ -11,16 +11,16 @@ class Question < ActiveRecord::Base
   belongs_to :question_type
   belongs_to :paper
 
-  delegate :name, :to => :question_type, :prefix => true
+  delegate :type, :to => :question_type
 
   scope :in_a_paper, lambda { |paper| where(:paper_id => paper) }
   scope :same_type, lambda { |type| where(:question_type_id => type) }
 
   def type_of_multiple_choice_question?
-    question_type_name == '选择题'
+    type  == :multiple_choice
   end
 
   def type_of_true_false_question?
-    question_type_name == '判断题'
+    type  == :true_false
   end
 end
