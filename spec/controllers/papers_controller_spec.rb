@@ -11,7 +11,7 @@ describe PapersController do
     it "returns all papers with right format" do
       Paper.should_receive(:all).and_return(papers)
 
-      get 'index'
+      get 'index', :format => 'json'
 
       actual = Yajl::Parser.new.parse response.body
       expected_json = <<-PAPERS
@@ -37,7 +37,7 @@ describe PapersController do
     it 'returns the exec paper with right format when given an id' do
       Paper.should_receive(:find).with(paper.id).and_return(paper)
 
-      get 'show', :id => paper.id
+      get 'show', :id => paper.id, :format => 'json'
       actual = Yajl::Parser.new.parse response.body
       expected_json = <<-PAPER
       {
@@ -49,7 +49,7 @@ describe PapersController do
            "id": #{paper.questions.first.id},
            "title": "#{paper.questions.first.title}",
            "score": #{paper.questions.first.score},
-           "question_type": "#{paper.questions.first.question_type.name}"
+           "question_type": "#{paper.questions.first.question_type.type}"
           }] 
         }
       }
