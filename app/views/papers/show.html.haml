@@ -1,0 +1,11 @@
+%h1= t('titles.show_paper_detail')
+-if @paper
+  %li= @paper.title
+  %li= @paper.score
+  - @questions = Question.in_a_paper(@paper)
+  - @paper.question_types.each do |question_type|
+    %h2= t("enums.question_type.types.#{question_type.type}")
+    - same_type_questions = @questions.same_type(question_type)
+    - same_type_questions.each do |q|
+      %p=raw q.title + " (" + q.score.to_s + ")"
+      %p.sexyblue.sexysimple.sexybutton=raw q.title + " (" + q.score.to_s + ")"

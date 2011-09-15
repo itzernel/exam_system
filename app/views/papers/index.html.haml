@@ -1,0 +1,6 @@
+%h1= t('titles.papers')
+%ul{ :class => 'papers'}
+  - @papers.each do |paper|
+    %li= paper.title
+    %li= paper.score
+
