@@ -179,6 +179,15 @@ zh-CN:
       prompt: "请选择"
 
   activerecord:
+    enums:
+      question_type:
+        types:
+          multiple_choice: '选择题'
+          true_false: '判断题'
+          blank_filling: '填空题'
+          short_answer: '简答题'
+          calculation: '计算题'
+          essey_writing: '论述题'
     errors:
       template: # ~ 2.3.5 backward compatible
         header:
@@ -209,15 +218,6 @@ zh-CN:
         even: "必须为双数"
         taken: "已经被使用"
         record_invalid: "校验失败: %{errors}"
-    enums:
-      question_type:
-        types:
-          multiple_choice: '选择题'
-          true_false: '判断题'
-          blank_filling: '填空题'
-          short_answer: '简答题'
-          calculation: '计算题'
-          essey_writing: '论述题'
     models:
       user: '用户'
       question: '题目'
