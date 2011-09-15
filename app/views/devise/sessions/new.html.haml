@@ -5,7 +5,6 @@
     - if flash[:alert]
       #error_explanation= flash[:alert]
     %h1= t('titles.signin')
-    = f.text_field :login, :placeholder => t('labels.email_or_name'), :label => t('labels.email_or_name')
+    = f.text_field :email, :placeholder => t('labels.email'), :label => t('labels.email')
     = f.password_field :password, :placeholder => t('labels.password'), :label => t('labels.password')
-    %button{ :class => 'sexybutton sexysimple sexyblue', :type => 'submit'}= t('buttons.signin')
-
+    %button{ :class => "sexybutton sexysimple sexyblue", :type => 'submit'}= t('buttons.signin')

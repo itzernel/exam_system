@@ -8,6 +8,9 @@
     confirm: '确认'
     signin: '登录'
     signup: '注册'
+  labels:
+    email: '电子邮件'
+    password: '密码'
   titles:
     signin: '登录'
     papers: '试卷列表'
@@ -15,3 +18,12 @@
   errors:
     messages:
       internal_error: '服务器发生内部错误，请重试或联系管理员。'
+  enums:
+    question_type:
+      types:
+        multiple_choice: '选择题'
+        true_false: '判断题'
+        blank_filling: '填空题'
+        short_answer: '简答题'
+        calculation: '计算题'
+        essey_writing: '论述题'
