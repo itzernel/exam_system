@@ -25,13 +25,14 @@ gem 'nokogiri'
  gem 'rails_admin',  :git => 'git://github.com/sferik/rails_admin.git', :branch => "rails-3.0"
  gem 'ckeditor', '~>3.6.0'
  gem "simple_form"
+ gem 'simple_enum'
 # gem 'fastercsv' # for Ruby 1.8.7+
 # gem 'prawn'
  gem "haml"
  gem "haml-rails"
 # gem 'validates_timeliness', '~> 3.0.5'
 # gem 'acts-as-taggable-on'
-gem 'acts_as_api'
+ gem 'acts_as_api'
 
 # gem 'hoptoad_notifier'
 # gem 'newrelic_rpm'
